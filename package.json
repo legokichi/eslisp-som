@@ -1,0 +1,16 @@
+{
+  "name": "eslisp-som",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eslc -t eslisp-propertify -t eslisp-camelify ./src/index.lisp | tee ./lib/index.js",
+    "watch": "watch 'npm run build' src & http-server -p 8000 & open http:localhost:8000/demo/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "eslisp-fancy-function": "^0.2.0"
+  }
+}
